@@ -53,6 +53,7 @@ export const Pagination = ({ count }: PaginationProps) => {
                       : "text-theme-black hover:border text-sm font-bold py-0.25 px-1 rounded-sm"
                   }
                   onClick={() => pageHandler(el)}
+                  key={el}
                 >
                   {el}
                 </button>

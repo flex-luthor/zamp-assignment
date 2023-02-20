@@ -151,6 +151,7 @@ export const Filters = ({ filters }: { filters: FilterProps }) => {
               onChange={(e: any) => queryHandler(e, "gender")}
               label={genderName}
               variant="bold"
+              key={genderName}
             />
           );
         })}
@@ -164,6 +165,7 @@ export const Filters = ({ filters }: { filters: FilterProps }) => {
               checked={category.split(",").includes(categoryName)}
               onChange={(e: any) => queryHandler(e, "category")}
               label={categoryName}
+              key={categoryName}
             />
           );
         })}
@@ -177,6 +179,7 @@ export const Filters = ({ filters }: { filters: FilterProps }) => {
               checked={priceRange.split(",").includes(priceRangeName)}
               onChange={(e: any) => queryHandler(e, "priceRange")}
               label={priceRangeName}
+              key={priceRangeName}
             />
           );
         })}
@@ -190,6 +193,7 @@ export const Filters = ({ filters }: { filters: FilterProps }) => {
               checked={brand.split(",").includes(brandName)}
               onChange={(e: any) => queryHandler(e, "brand")}
               label={brandName}
+              key={brandName}
             />
           );
         })}
@@ -203,6 +207,7 @@ export const Filters = ({ filters }: { filters: FilterProps }) => {
               checked={color.split(",").includes(colorName)}
               onChange={(e: any) => queryHandler(e, "color")}
               label={colorName}
+              key={colorName}
             />
           );
         })}
@@ -216,6 +221,7 @@ export const Filters = ({ filters }: { filters: FilterProps }) => {
               checked={discount === discountName}
               onChange={(e: any) => queryHandler(e, "discount")}
               label={`${discountName}% and above`}
+              key={discountName}
             />
           );
         })}
