@@ -25,14 +25,19 @@ export const useQuery = () => {
     discount,
     sortBy,
   }: QueryInterface) => {
-    if (page) query.page = page.toString();
-    if (gender) query.gender = gender;
-    if (category) query.category = category;
-    if (brand) query.brand = brand;
-    if (priceRange) query.priceRange = priceRange;
-    if (color) query.color = color;
-    if (discount) query.discount = discount;
-    if (sortBy) query.sortBy = sortBy;
+    if (page) {
+      query.page = page.toString();
+    } else {
+      if (gender) query.gender = gender;
+      if (category) query.category = category;
+      if (brand) query.brand = brand;
+      if (priceRange) query.priceRange = priceRange;
+      if (color) query.color = color;
+      if (discount) query.discount = discount;
+      if (sortBy) query.sortBy = sortBy;
+      query.page = "1";
+    }
+
     router.push(router);
   };
 

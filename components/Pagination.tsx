@@ -22,7 +22,7 @@ export const Pagination = ({ count }: PaginationProps) => {
   return (
     <div className="mb-24 flex items-center">
       <div className="ml-8 text-theme-black-50 text-xs w-36 md:block hidden">
-        Page {query.page || 1} of {numOfPages}
+        Page {query.page || 1} of {numOfPages || 1}
       </div>
       <div className="w-full justify-center flex">
         <div className="flex justify-between items-center w-full px-6 max-w-[800px]">
