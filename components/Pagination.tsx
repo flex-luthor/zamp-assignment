@@ -14,7 +14,6 @@ export const Pagination = ({ count }: PaginationProps) => {
   const numOfPages = Math.ceil(count / 36);
 
   const pageHandler = (num: number) => {
-    console.log(num);
     const { query } = router;
     query.page = num.toString();
     router.push(router);

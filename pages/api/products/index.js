@@ -77,14 +77,11 @@ export default function handler(req, res) {
       let globalMax = 0;
       priceRangeArr.forEach((priceRange) => {
         const price = priceRange.split("-");
-        console.log(price);
         const min = Number(price[0].trim().slice(3));
         if (min < globalMin) globalMin = min;
-        console.log(globalMin);
 
         const max = Number(price[1].trim().slice(3));
         if (max > globalMax) globalMax = max;
-        console.log(globalMax);
       });
 
       result = result.filter((product) => {
